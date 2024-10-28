@@ -66,7 +66,7 @@ header {
         rgba(18, 50, 172, 0.9),  /* Blue shade */
         rgba(18, 50, 172, 0.7)   /* Lighter blue shade */
     ),
-    url("assets/header.jpg");
+    url("Assets/header.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
