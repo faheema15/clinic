@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <title>CareLink | Doctor's Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Assets/dashboard.css">
+    <link rel="icon" href="assets/icon.png" />
+</head>
+<body>
+    <header>
+        <nav class="section__container nav__container">
+            <div class="nav__logo">Care<span>Link</span></div>
+            <h2 class="welcome">Welcome Dr. Emily!</h2>
+            <div class="logout-container">
+              <i class="fas fa-user user-icon" onclick="toggleTable()" style="margin-right: 20px; color: white;"></i>
+              <a href="#" class="logout-icon" onclick="toggleLogout(); return false;">
+                  <i class="fas fa-sign-out-alt" style="color: white;"></i>
+              </a>
+              <button class="logout-button" id="logoutButton" style="display: none;" onclick="logout();">
+                  Logout
+              </button>
+          </div>
+        </nav>
+    </header>
+    <table class="styled-table">
+      <h2 class="tableheading">Appointments</h2>
+      <thead>
+          <tr>
+              <th>Appointment ID</th>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+              <th>Status</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>303</td>
+              <td>210</td>
+              <td>Elena</td>
+              <td>
+                  <label class="radio-container">
+                      <input type="radio" name="status-303" value="Waiting" />
+                      <span class="radio-mark"></span>
+                      Waiting
+                  </label>
+                  <label class="radio-container">
+                      <input type="radio" name="status-303" value="Completed" />
+                      <span class="radio-mark"></span>
+                      Completed
+                  </label>
+              </td>
+          </tr>
+          <tr>
+              <td>301</td>
+              <td>103</td>
+              <td>Robert</td>
+              <td>
+                  <label class="radio-container">
+                      <input type="radio" name="status-301" value="Waiting" />
+                      <span class="radio-mark"></span>
+                      Waiting
+                  </label>
+                  <label class="radio-container">
+                      <input type="radio" name="status-301" value="Completed" />
+                      <span class="radio-mark"></span>
+                      Completed
+                  </label>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  
+    <br> <br>
+
+    <table class="styled-table">
+      <h2 class="tableheading">Patient Details</h2>
+      <thead>
+        <tr>
+          <th>PatientID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Medical History</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>201</td>
+          <td>Caroline</td>
+          <td>20</td>
+          <td>Female</td>
+          <td>
+            <ul style="list-style: none;">
+              <li>Allergies: None</li>
+              <li>Conditions: Asthma</li>
+              <li>Medications: Albuterol inhaler (as needed)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>206</td>
+          <td>Robert</td>
+          <td>38</td>
+          <td>Male</td>
+          <td>
+            <ul style="list-style: none;">
+              <li>Allergies: Penicillin</li>
+              <li>Conditions: Hypertension</li>
+              <li>Medications: Lisinopril</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>208</td>
+          <td>Sophia</td>
+          <td>65</td>
+          <td>Female</td>
+          <td>
+            <ul style="list-style: none;">
+              <li>Allergies: None</li>
+              <li>Conditions: High cholesterol</li>
+              <li>Medications: Atorvastatin</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br> <br> <br> <br>
+    
+    <div id="userModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>User Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="display: flex; justify-content: center; align-items: center;">
+                <img src="Assets/doctor-1.jpg" style="height: 200px; width: 150px; margin: 0;">
+            </td>
+            </tr>
+            <tr>
+              <td>Name: Dr. Emily Smith</td>
+            </tr>
+            <tr>
+              <td>Email ID: emi@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Phone number: 9876540988</td>
+            </tr>
+            <tr>
+              <td>Role: Doctor (General Medicine)</td>
+            </tr>
+            <tr>
+              <td>User ID: 103</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col content">
+          <h3>Care<span>Link</span></h3>
+          <p style="text-align: justify;">
+            We are honored to be a part of your healthcare journey and committed
+            to delivering compassionate, personalized, and top-notch care every
+            step of the way.
+          </p>
+          <p style="text-align: justify;">
+            Trust us with your health, and let us work together to achieve the
+            best possible outcomes for you and your loved ones.
+          </p>
+        </div>
+        <div class="footer__col contact">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="ri-map-pin-2-fill"></i> 123, Carelink Street, India
+          </p>
+          <p><i class="ri-mail-fill"></i> support@care.com</p>
+          <p><i class="ri-phone-fill"></i> (+91) 98765 34210</p>
+          <div class="footer__socials">
+            <a href="https://instagram.com/"><span><i class="ri-instagram-line"></i></span></a> 
+            <a href="https://facebook.com/"><span><i class="ri-facebook-fill"></i></span></a> 
+            <a href="https://x.com/"><span><i class="ri-twitter-fill"></i></span></a> 
+            <a href="mailto:support@carelink.com"><span><i class="ri-mail-fill"></i></span></a>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+<script>
+  function toggleLogout() {
+      const logoutButton = document.getElementById('logoutButton');
+      if (logoutButton.style.display === 'none') {
+          logoutButton.style.display = 'block'; // Show the logout button
+      } else {
+          logoutButton.style.display = 'none'; // Hide the button again if clicked
+      }
+  }
+  
+  function logout() {
+      // Perform logout actions here (e.g., clearing session storage)
+      // For demonstration, we will just redirect to the login page.
+      window.location.href = "login.html";
+  }
+  
+  function toggleTable() {
+      const modal = document.getElementById('userModal');
+      if (modal.style.display === 'block') {
+          modal.style.display = 'none'; // Hide modal if it's already open
+      } else {
+          modal.style.display = 'block'; // Show modal
+      }
+  }
+  
+  function closeModal() {
+      document.getElementById('userModal').style.display = 'none';
+  }
+  
+  // Close the modal if the user clicks outside of the modal content
+  window.onclick = function(event) {
+      const modal = document.getElementById('userModal');
+      if (event.target === modal) {
+          modal.style.display = 'none';
+      }
+  }
+  </script>
+  <!-- Include your common Firebase config file -->
+<script src="firebase-config.js"></script>
+<script src="script.js" type="module"></script>
+
+  
+
+</body>
+</html>
