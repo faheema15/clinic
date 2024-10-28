@@ -1,0 +1,159 @@
+.welcome {
+    color: white;
+}
+
+.fas fa-sign-out-alt{
+    color: white;
+}
+
+.logout-container {
+    position: relative; /* Position for absolute elements */
+}
+
+.logout-icon {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.logout-button {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position it below the icon */
+    left: 0px; /* Adjust to add space from the left */
+    top: 30px; /* Adjust the vertical position */
+    background-color: #357ef4; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.logout-button:hover {
+    background-color: #2869c3; /* Darker shade on hover */
+}
+
+.tableheading {
+    color: #357ef4;
+    padding: 20px 70px;
+    text-align: center;
+}
+
+.styled-table {
+    width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse; /* Merge borders */
+}
+
+.styled-table th,
+.styled-table td {
+    border: 2px solid #013a94; /* Border color */
+    padding: 15px; /* Increase padding for taller rows */
+    text-align: left; /* Align text to the left */
+}
+
+.styled-table th {
+    background-color: #357ef4; /* Header background color */
+    color: #f1f1f1;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px; /* Adjust font size for the label */
+    margin-bottom: 10px; /* Space between options */
+}
+
+.radio-container input {
+    display: none; /* Hide the default radio button */
+}
+
+.radio-mark {
+    width: 25px; /* Width of the radio button */
+    height: 25px; /* Height of the radio button */
+    border: 2px solid #357ef4; /* Border color */
+    border-radius: 50%; /* Circular shape */
+    position: relative;
+    margin-right: 10px; /* Space between radio and label */
+    transition: background-color 0.2s;
+}
+
+.radio-container input:checked + .radio-mark {
+    background-color: #357ef4 /* Background color when selected */
+}
+
+.radio-mark:after {
+    content: "";
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 9px; /* Center horizontally */
+    top: 9px; /* Center vertically */
+    width: 7px; /* Inner circle width */
+    height: 7px; /* Inner circle height */
+    border-radius: 50%; /* Inner circle shape */
+    background-color: white; /* Inner circle color */
+}
+
+.radio-container input:checked + .radio-mark:after {
+    display: block; /* Show inner circle when checked */
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+  }
+
+  /* Modal Background */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust the width of the modal */
+    max-width: 800px; /* Limit the maximum width */
+  }
+
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Simple style for the table inside the modal */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #357ef4;
+  }
